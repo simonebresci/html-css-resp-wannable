@@ -76,6 +76,12 @@ img {
 /* Cellulare - Media query <420px */
 @media screen and (max-width: 420px){
 
+  *{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+  }
+
   /* BLOCCO LEZIONI - aumenta width a 100%*/
   #lezioni .row>.left,
   #lezioni .row>.right {
@@ -94,16 +100,63 @@ img {
   /* h1, h2, h3, testo personalizzati */
   .row h1{
     font-size: 72px;
+    margin-top:200px;
+    margin-bottom: 100px;
   }
+
+  /* Elimina primo margine manualmente */
+  #lezioni div h1{
+    margin-top:20px;
+  }
+
   .row h2{
     font-size: 60px;
   }
   .row h3{
     font-size: 50px;
   }
+
+  .row #text{
+    background-color: red;
+  }
+
   .row * {
     font-size: 40px;
+    margin-bottom: 50px;
   }
   /* h1, h2, h3, testo personalizzati */
+
+  /* Inserisci padding laterali sui contenuti */
+  .row h1, .row h2, .row h3, .row * {
+    padding: 0px 50px;
+  }
+
+  /* Elimina hr di sezione */
+  .row hr{
+    display: none;
+  }
+
+}
+
+/* Tablet - media query <768px */
+@media screen and (min-width:421px) and (max-width:768px) {
+  /* Scritta al volo */
+  body:before{
+    content:"Layout tablet bonus";
+  }
+
+  /* BLOCCO STEPS - aumenta width a 100%*/
+  #steps .row>.left,
+  #steps .row>.central,
+  #steps .row>.right {
+    float: left;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+
+  /* Elimina hr di sezione */
+  .row hr{
+    display: none;
+  }
 
 }
